@@ -1,0 +1,390 @@
+/* ===== CSS bersama: index.html, hobi.html, kontak.html ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #334155;
+    line-height: 1.6;
+    padding: 2.5rem 1rem;
+}
+
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+/* ----- Header ----- */
+.header {
+    background: linear-gradient(135deg, #1e293b 0%, #3bf657 100%);
+    color: #ffffff;
+    padding: 2rem 2rem 1.75rem;
+}
+
+.header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.header p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+/* ----- Navigasi ----- */
+.nav-list {
+    display: flex;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 1rem 2rem;
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    flex-wrap: wrap;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #25eb28;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 8px;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+    background: #25eb2f;
+    color: #ffffff;
+    border-color: #25eb28;
+}
+
+/* ----- Konten ----- */
+.content {
+    padding: 2rem;
+    min-height: 250px;
+}
+
+.section h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section p {
+    margin-bottom: 0.85rem;
+    font-size: 0.98rem;
+    color: #475569;
+}
+
+/* ----- Tombol pindah halaman ----- */
+.nav-switch {
+    margin-top: 1.75rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-switch {
+    display: inline-block;
+    text-decoration: none;
+    color: #25eb32;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    transition: all 0.2s ease;
+}
+
+.btn-switch:hover {
+    background: #25eb39;
+    color: #ffffff;
+    border-color: #25eb39;
+}
+
+/* ===== Khusus index.html (Tentang Saya) ===== */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-img-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4bf63b;
+    box-shadow: 0 4px 14px rgba(59, 246, 65, 0.25);
+    display: block;
+}
+
+.status-badge {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 14px;
+    height: 14px;
+    background-color: #22c55e;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+.profile-text h3 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.profile-text p {
+    font-size: 0.9rem;
+    color: #52ca56;
+    margin-bottom: 0.5rem;
+}
+
+.tags-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.tag-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
+    background-color: #eff6ff;
+    color: #1dd829;
+    border: 1px solid #dbeafe;
+}
+
+.highlight-name { color: #1dd826; font-weight: 600; }
+.highlight-univ { color: #b45309; font-style: italic; font-weight: 600; }
+.highlight-course { color: #15803d; font-weight: 600; }
+.highlight-class { color: #25ce22; font-weight: 600; }
+.highlight-domisili { color: #be123c; font-style: italic; font-weight: 600; }
+.highlight-job { color: #0ea103; font-weight: 600; }
+
+.info-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.85rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.info-summary-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.info-summary-item span {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    margin-bottom: 0.2rem;
+}
+
+.info-summary-item strong {
+    font-size: 0.92rem;
+    color: #1e293b;
+}
+
+/* ===== Tabel (index.html & hobi.html) ===== */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 1.5rem 0 1.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.data-table,
+.hobi-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.data-table caption,
+.hobi-table caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 700;
+    color: #0f172a;
+    padding: 0.85rem 1rem;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table th,
+.data-table td,
+.hobi-table th,
+.hobi-table td {
+    padding: 0.7rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table thead th,
+.hobi-table th {
+    background: #1e293b;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.data-table tbody td {
+    color: #1e293b;
+}
+
+.data-table tbody tr:nth-child(even),
+.hobi-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.data-table tbody tr:last-child td,
+.hobi-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== Khusus hobi.html ===== */
+.ordered-list {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem 1.25rem 2.5rem;
+    margin-bottom: 1.75rem;
+    color: #1e293b;
+    font-size: 1rem;
+}
+
+.ordered-list li {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.ordered-list li:last-child {
+    margin-bottom: 0;
+}
+
+.ordered-list li span {
+    font-weight: 400;
+    color: #31c431;
+    font-size: 0.9rem;
+    margin-left: 0.35rem;
+}
+
+.video-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.25rem;
+    margin-top: 1rem;
+}
+
+.video-box h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.video-box p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.video-wrapper {
+    position: relative;
+    background-color: #0f172a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.responsive-video {
+    width: 100%;
+    max-height: 480px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.video-box p.video-caption {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* ===== Khusus kontak.html ===== */
+.contact-info {
+    list-style: none;
+    color: #475569;
+    font-size: 0.98rem;
+}
+
+.contact-info li {
+    margin-bottom: 0.75rem;
+}
+
+.contact-info strong {
+    color: #1e293b;
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 540px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tags-group {
+        justify-content: center;
+    }
+}
